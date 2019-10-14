@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+    <style type="text/css">
+        .redfont{
+            color : red;
+        }
+        .bigfont{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <!--指定多个样式-->
+    <span v-bind:class="myclass">hello world</span><br>
+    <span v-bind:class="[var1,var2]">how are you???</span><br>
+    <span v-bind:class="[a == 1 ? 'redfont' : 'bigfont']">hello vue!!!</span><br>
+
+</div>
+<script language="JavaScript">
+    //创建VUE实例
+    var vm = new Vue({
+        el : "#div1",
+        data : {
+            var1 : "redfont",
+            var2 : "bigfont",
+            a    : 2
+        },
+        computed : {
+            myclass : function(){
+                return {
+                    redfont : false ,
+                    bigfont : true
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

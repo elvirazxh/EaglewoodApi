@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+<!--事件修饰符-->
+<div id="div1">
+    <my_friend_link v-for="e in anchors" v-bind:anchor="e"></my_friend_link><br>
+
+</div>
+
+<script language="JavaScript">
+//    注册组件
+    Vue.component("my_friend_link",{
+//        自定义属性,用于动态接收参数
+        props : ['anchor'],
+        data : function(){
+            return {
+                count : 0
+            }
+        },
+        //组件只能根元素
+        template : '<div><a v-bind:href="anchor.href">{{anchor.title}}</a></div>'
+    });
+    var vm1 = new Vue({
+        el : "#div1",
+        data : {
+            anchors : [
+                {href : 'https://www.baidu.com' ,title : '百度'},
+                {href : 'https://www.google.com' ,title : 'google'},
+                {href : 'https://www.aliyum.com' ,title : '阿里云'},
+            ]
+        }
+    });
+
+
+</script>
+</body>
+</html>

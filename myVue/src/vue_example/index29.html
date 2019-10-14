@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+<div id="div1">
+    <!--v-show始终进行渲染,只是通过display样式进行空时是否显示-->
+    <span v-show="showme">hello world</span>
+
+    <span v-show="showme2">how are you</span>
+</div>
+<script language="JavaScript">
+    var vm = new Vue({
+        el : "#div1",
+        data : {
+            showme : true,
+            showme2 : false
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+<script language="JavaScript">
+    var vm = new Vue({
+        data : {
+            items : [3,2,4,1]
+        }
+    });
+    //压栈
+    vm.items.push(5);
+    //出栈
+    vm.items.pop();
+    //移动元素,从头部删除元素,后面元素一次上移
+    vm.items.shift();
+    //从头部添加元素,元素一次下移
+    vm.items.unshift(3);
+    //从所以1开始删除2个元素,添加元素6
+    vm.items.splice(1,2,6);
+    //排序
+    vm.items.sort();
+    //倒序元素
+    vm.items.reverse();
+//
+//    console.log("xxxxx")
+</script>
+</body>
+</html>

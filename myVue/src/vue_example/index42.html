@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+<!--事件修饰符-->
+<div id="div1">
+
+    <input type="radio" v-model="pay" value="1">支付宝<br>
+    <input type="radio" v-model="pay" value="2">微信<br>
+    <input type="radio" v-model="pay" value="3">网银<br>
+    <input type="radio" v-model="pay" value="4">PayPal<br>
+</div>
+
+<script language="JavaScript">
+    var vm1 = new Vue({
+        el : "#div1",
+        data : {
+            chk : true,
+            pay : 3
+        }
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+<!--事件修饰符-->
+<div id="div1">
+    <input id="chk1" type="checkbox" v-model="chk"><label for="chk1">记住</label>
+    <hr>
+    <input type="checkbox" v-model="hobbies" value="1">足球<br>
+    <input type="checkbox" v-model="hobbies" value="2">篮球<br>
+    <input type="checkbox" v-model="hobbies" value="3">排球<br>
+    <input type="checkbox" v-model="hobbies" value="4">乒乓球<br>
+</div>
+
+<script language="JavaScript">
+    var vm1 = new Vue({
+        el : "#div1",
+        data : {
+            chk : true,
+            hobbies : [1,2]
+        }
+    });
+
+
+</script>
+</body>
+</html>

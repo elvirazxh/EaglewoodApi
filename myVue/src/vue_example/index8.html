@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+<div id="div1">
+     {{message}}
+</div>
+<script language="JavaScript">
+//    创建json对象
+    var mydata = {
+        message : "hello world"
+    };
+
+    //创建VUE实例
+    var vm = new Vue({
+        el : "#div1",
+        data : mydata
+    });
+
+//访问内置元素
+    console.log(vm.$data.message);
+
+//通过内置元素赋值
+    vm.$data.message = "foo bar!!!";
+
+//创建新对象
+    var mydata2 ={
+        message : "how are you??"
+    }
+
+//不能对内置元素$data进行赋值,推荐对其内部的属性赋值
+    vm.$data = mydata2;
+    console.log(vm.$data.message);
+
+
+
+
+</script>
+</body>
+</html>

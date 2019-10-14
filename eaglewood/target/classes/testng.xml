@@ -1,0 +1,23 @@
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >-->
+
+
+<!--<suite name="接口测试套件">-->
+
+
+    <!--<test name="接口测试用例">-->
+        <!--<classes>-->
+
+            <!--<class name="com.creditease.cases.TestSuite">-->
+                <!--<methods>-->
+                    <!--<include name="testSuite"/>-->
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+    <!--<listeners>-->
+        <!--<listener class-name="com.creditease.config.ExtentTestNGIReporterListener" />-->
+    <!--</listeners>-->
+
+<!--</suite>-->

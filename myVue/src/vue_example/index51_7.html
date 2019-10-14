@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+<!---->
+<style>
+    .router-link-active{background:pink;}
+    .v-enter,.v-leave-to{
+        opacity:0;
+    }
+    .v-enter-active,.v-leave-active{
+        transition:opacity .5s;
+    }
+</style>
+
+
+
+<div id="app" >
+    <!--路由出口,路由匹配到的组件将渲染在这里-->
+    <transition>
+        <router-view></router-view>
+    </transition>
+    <br>
+    <p>
+        <router-link to="/" exact>index</router-link>
+        <router-link :to="{name:'foo', hash:'#abc'}" >go to foo</router-link>
+        <router-link :to="{name:'bar'}" >go to bar</router-link>
+    </p>
+</div>
+
+<script language="JavaScript">
+    //    定义路由组件,可以从其他文件import进来
+    const Foo = {template : "<div>hello foo!</div>"}
+    const Bar = {template : "<div>hello bar!</div>"}
+    const Home= {template : "<div>home!</div>"}
+
+    const routes = [
+        {path : "/foo", component :Foo},
+        {path : "/bar", component :Bar},
+        {path : "/", component :Home}
+    ]
+    const app = new Vue({
+        el : "#app",
+        router:new VueRouter({
+            mode:'history',
+            routes,
+            scrollBeavior(to,from,savedPosition){
+                if(to.hash){
+                    return {selector:to.hash}
+                }
+
+                if(savedPosition){
+                    return savedPosition;
+                }else{
+                    return {x:0,y:0}
+                }s
+            }
+        })
+    })
+</script>
+</body>
+</html>

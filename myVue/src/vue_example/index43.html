@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+<!--事件修饰符-->
+<div id="div1">
+    <select v-model="mycity">
+        <option v-for="c in cities" v-bind:value="c.id">{{c.name}}</option>
+    </select>
+</div>
+
+<script language="JavaScript">
+    var vm1 = new Vue({
+        el : "#div1",
+        data : {
+           cities : [
+               {name : '北京' , id : 1},
+               {name : '上海' , id : 2},
+               {name : '广州' , id : 3},
+               {name : '深圳' , id : 4}
+           ],
+            mycity : 2
+        }
+    });
+
+
+</script>
+</body>
+</html>

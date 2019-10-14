@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+<!---->
+<style>
+    .router-link-active{background:pink;}
+    .v-enter,.v-leave-to{
+        opacity:0;
+    }
+    .v-enter-active,.v-leave-active{
+        transition:opacity .5s;
+    }
+</style>
+
+
+
+<div id="app" >
+    <!--路由出口,路由匹配到的组件将渲染在这里-->
+    <transition>
+        <router-view></router-view>
+    </transition>
+    <br>
+    <p>
+        <router-link to="/" exact>index</router-link>
+        <router-link :to="{name:'foo', hash:'#abc'}" >go to foo</router-link>
+        <router-link :to="{name:'bar'}" >go to bar</router-link>
+    </p>
+</div>
+
+<script language="JavaScript">
+    //    定义路由组件,可以从其他文件import进来
+    const Foo = {template : "<div>hello foo!</div>"}
+    const Bar = {template : "<div>hello bar!</div>"}
+    const Home= {template : "<div>home!</div>"}
+    const Login= {template : "<div>请登录</div>"}
+
+    const routes = [
+        {path : "/foo", name:'foo',component:Foo,meta:{index:1,login:true}},
+        {path : "/bar", name:'bar',component:Bar,meta:{index:2}},
+        {path : "/", name:'home',component:Home,meta:{index:0}},
+        {path : "/login", name:'login',component:Login,},
+    ]
+
+    const router = new VueRouter({
+        routes,
+    })
+
+    router.beforeEach((to,from,next)=>{
+        if(to.meta.login){
+            next('/login');
+        }
+        next();
+    });
+
+    router.afterEach((to,form)=> {
+        document.title = to.name;
+    })
+
+    const app = new Vue({
+        el : "#app",
+        router,
+    })
+</script>
+</body>
+</html>

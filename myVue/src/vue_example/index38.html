@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+<!--事件修饰符-->
+<div id="div1">
+    <p>{{count}}</p>
+    <button v-on:click.stop="processClick(1)">点击我</button><br>
+    <button v-on:click.prevent="processClick(1)">点击我</button><br>
+    <button v-on:click.capture="processClick(1)">点击我</button><br>
+    <button v-on:click.self="processClick(1)">点击我</button><br>
+    <button v-on:click.once="processClick(1)">点击我</button><br>
+    <button v-on:click.passive="processClick(1)">点击我</button><br>
+
+</div>
+<script language="JavaScript">
+    var vm = new Vue({
+        el : "#div1",
+        data : {
+            count : 1
+        },
+        methods : {
+            processClick : function (offset) {
+                this.count = this.count + offset
+            },
+            log : function () {
+                console.log('div clicked one time')
+            }
+        }
+    });
+</script>
+</body>
+</html>

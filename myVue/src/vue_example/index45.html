@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+<!--事件修饰符-->
+<div id="div1">
+    <p>{{city}}</p>
+    .lazy渲染 : <input v-model.lazy="city"><hr>
+    .number渲染 : <input v-model.number="age"><hr>
+    .trim渲染 : <input v-model.trim="desc">
+</div>
+
+<script language="JavaScript">
+    var vm1 = new Vue({
+        el : "#div1",
+        data : {
+           city : 'beijing',
+            age : '12',
+            desc : " hello world "
+
+        }
+    });
+
+
+</script>
+</body>
+</html>

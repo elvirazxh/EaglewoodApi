@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+<!---->
+<div id="app" >
+ <!--渲染成超链接元素-->
+<!--使用router-link组件来导航,通过传入'to'属性指定链接,<router-link>默认渲染成一个'<a>'标签-->
+    <p>
+        <router-link to="/" exact>index</router-link>
+        <router-link :to="{name : 'bar'}">go to bar</router-link><br>
+        <router-link :to="{name : 'user'}">User</router-link><br>
+    </p>
+    <br>
+    <!--渲染页面内容到此处-->
+    <!--路由出口,路由匹配到的组件将渲染在这里-->
+    <router-view></router-view>
+</div>
+
+<script language="JavaScript">
+//    定义路由组件,可以从其他文件import进来
+    const home = {template: '<div>home</div>'}
+    const bar = {template : "<div>bar</div>"}
+    const user = {template : `
+    <div>
+        <p>user</p>
+        <router-link style="margin: 0 10px" :to="'/usre/' + item.id" v-for="item in userList" key="item.id">{{item.userName}}</router-link>
+    </div>`,
+    data(){
+        return{userList:[{id:1,userName:'u1'},{id:2,userName:'u2'},{id:3,userName:'u3'}]}
+    }
+    }
+
+    const app = new Vue({
+        el : "#app",
+        router:new VueRouter({
+            routes: [
+                {path: '/', name:'home', component:home},
+                {path: '/user/:id?', name:'user', component:user},
+                {path: '/bar', name:'bar',component:bar},
+
+            ]
+        })
+    })
+</script>
+</body>
+</html>

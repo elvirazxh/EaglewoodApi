@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+<div id="div1">
+    <!--数组定义方式样式-->
+    <button v-bind:style="{display: ['-webkit','-ms-flexbox','flex']}">点击我</button>
+</div>
+<script language="JavaScript">
+    var vm = new Vue({
+        el : "#div1",
+        data : {
+            myStyle1 : {
+                color : 'red',
+                fontSize : '40px'
+            },
+            myStyle2 : {
+                border : '1px solid blue'
+            }
+        }
+    })
+</script>
+</body>
+</html>

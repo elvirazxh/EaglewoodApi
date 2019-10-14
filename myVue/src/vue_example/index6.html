@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+<script language="JavaScript">
+//    创建json对象
+    var mydata = {
+        a : 1
+    };
+//创建VUE实例
+    var vm = new Vue({
+        data : mydata
+    });
+
+    console.log(mydata.a)
+    console.log(vm.a)
+
+//    ===判断值和类型都相等
+//    ==判断值相等
+
+    console.log(mydata.a === vm.a);
+    mydata.a = 2;
+    console.log(vm.a);
+    vm.a = 3 ;
+    console.log(mydata.a)
+
+</script>
+</body>
+</html>

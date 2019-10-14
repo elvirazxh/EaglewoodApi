@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creditease.mybatis.dao.QuartzInfoMapper">
+  <resultMap id="BaseResultMap" type="com.creditease.mybatis.pojo.QuartzInfo">
+    <result column="system_flag" jdbcType="VARCHAR" property="systemFlag" />
+    <result column="system_env" jdbcType="VARCHAR" property="systemEnv" />
+    <result column="service_id" jdbcType="VARCHAR" property="serviceId" />
+    <result column="cron_express" jdbcType="VARCHAR" property="cronExpress" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    system_flag, system_env, service_id, cron_express
+  </sql>
+
+  <select id="selectByExample" parameterType="com.creditease.mybatis.pojo.QuartzInfoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from quartz
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from quartz
+  </select>
+
+  <select id="countByExample" parameterType="com.creditease.mybatis.pojo.QuartzInfoExample" resultType="java.lang.Integer">
+    select count(*) from quartz
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <delete id="deleteByExample" parameterType="com.creditease.mybatis.pojo.QuartzInfoExample">
+    delete from quartz
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+
+  <insert id="insert" parameterType="com.creditease.mybatis.pojo.QuartzInfo">
+    insert into quartz (system_flag, system_env, service_id, 
+      cron_express)
+    values (#{systemFlag,jdbcType=VARCHAR}, #{systemEnv,jdbcType=VARCHAR}, #{serviceId,jdbcType=VARCHAR}, 
+      #{cronExpress,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.creditease.mybatis.pojo.QuartzInfo">
+    insert into quartz
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="systemFlag != null">
+        system_flag,
+      </if>
+      <if test="systemEnv != null">
+        system_env,
+      </if>
+      <if test="serviceId != null">
+        service_id,
+      </if>
+      <if test="cronExpress != null">
+        cron_express,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="systemFlag != null">
+        #{systemFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="systemEnv != null">
+        #{systemEnv,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceId != null">
+        #{serviceId,jdbcType=VARCHAR},
+      </if>
+      <if test="cronExpress != null">
+        #{cronExpress,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByExampleSelective" parameterType="map">
+    update quartz
+    <set>
+      <if test="record.systemFlag != null">
+        system_flag = #{record.systemFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.systemEnv != null">
+        system_env = #{record.systemEnv,jdbcType=VARCHAR},
+      </if>
+      <if test="record.serviceId != null">
+        service_id = #{record.serviceId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cronExpress != null">
+        cron_express = #{record.cronExpress,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <update id="updateByExample" parameterType="map">
+    update quartz
+    set system_flag = #{record.systemFlag,jdbcType=VARCHAR},
+      system_env = #{record.systemEnv,jdbcType=VARCHAR},
+      service_id = #{record.serviceId,jdbcType=VARCHAR},
+      cron_express = #{record.cronExpress,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+
+  <select id="selectTaskInfoBy" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from quartz
+    where 1=1
+    <if test="sysFlag != null and sysFlag != ''">
+      and system_flag = #{sysFlag, jdbcType=VARCHAR}
+    </if>
+
+    <if test="sysEnv != null and sysEnv != ''">
+      and system_env = #{sysEnv, jdbcType=VARCHAR}
+    </if>
+
+    <if test="serviceId != null and serviceId != ''">
+      and service_id = #{serviceId, jdbcType=VARCHAR}
+    </if>
+    order by system_env desc
+  </select>
+
+
+
+</mapper>

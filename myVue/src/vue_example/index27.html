@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello vue!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+<div id="div1">
+    <!--数组定义方式样式-->
+    <span v-if="show">hello world</span>
+    <span v-else>how are you</span>
+</div>
+<script language="JavaScript">
+    var vm = new Vue({
+        el : "#div1",
+        data : {
+            show : false
+        }
+    })
+</script>
+</body>
+</html>
