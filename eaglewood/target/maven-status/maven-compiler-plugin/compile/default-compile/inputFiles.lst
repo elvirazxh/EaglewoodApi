@@ -5,6 +5,7 @@
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/cases/TestSuite.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/utils/DateUtils.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/pojo/MailInfoExample.java
+/Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/pojo/UserInfo.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/config/ExtentTestNGIReporterListener.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/utils/UUidUtils.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/service/impl/MerchInfoServiceImpl.java
@@ -15,6 +16,7 @@
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/service/impl/SysInfoServiceImpl.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/dao/TestResultMapper.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/dao/MerchInfoMapper.java
+/Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/controller/CaseController.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/pojo/QuartzInfo.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/pojo/MerchInfo.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/utils/DatabaseUtil.java
@@ -23,11 +25,13 @@
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/controller/ThymeleafController.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/pojo/TestCaseExample.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/service/MerchInfoService.java
+/Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/dao/UserInfoMapper.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/pojo/MailInfo.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/config/SwaggerConfig.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/utils/PublicParam.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/service/QuartzInfoService.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/utils/Resource.java
+/Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/controller/LoginController.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/service/TestCaseService.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/dao/SysInfoMapper.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/dao/TestCaseMapper.java
@@ -44,6 +48,8 @@
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mail/EmailUtil.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/config/ApplicationConfig.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/pojo/QuartzInfoExample.java
+/Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/controller/SysSetController.java
+/Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/service/LoginService.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/pojo/MerchInfoExample.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/utils/PasswordCheckUtil.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/pojo/TestCase.java
@@ -51,6 +57,8 @@
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/Application.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/pojo/TestResultExample.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/pojo/SysInfo.java
+/Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/mybatis/pojo/UserInfoExample.java
+/Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/service/impl/LoginServiceImpl.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/service/TestResultService.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/service/impl/QuartzInfoServiceImpl.java
 /Users/admin/Desktop/zhaoxuhua/autotest/EaglewoodApi/eaglewood/src/main/java/com/creditease/utils/QuartzFactoryUtil.java
