@@ -234,7 +234,7 @@ public class TestResultServiceImpl implements TestResultService {
             if(resultData==null && "null".equals(resultData)){
                 isPass = "false";
             }
-            System.out.println(resultData.get("status"));
+//            System.out.println(resultData.get("status"));
 
             if( resultData.get("status").equals("03")){
                 isPass = "false";

@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/EaglewoodApi.iml" filepath="$PROJECT_DIR$/EaglewoodApi.iml" />
       <module fileurl="file://$PROJECT_DIR$/eaglewood/eaglewood.iml" filepath="$PROJECT_DIR$/eaglewood/eaglewood.iml" />
       <module fileurl="file://$PROJECT_DIR$/myVue/myVue.iml" filepath="$PROJECT_DIR$/myVue/myVue.iml" />
-      <module fileurl="file://$PROJECT_DIR$/vue/vue.iml" filepath="$PROJECT_DIR$/vue/vue.iml" />
       <module fileurl="file://$PROJECT_DIR$/vue_web/vue_web.iml" filepath="$PROJECT_DIR$/vue_web/vue_web.iml" />
     </modules>
   </component>
